@@ -5,4 +5,3 @@ plotly==5.24.1
 seaborn==0.13.2
 streamlit==1.38.0
 streamlit_folium==0.23.0
-os==3.11.5
