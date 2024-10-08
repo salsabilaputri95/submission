@@ -5,9 +5,14 @@ import seaborn as sns
 import plotly.express as px
 import folium
 from streamlit_folium import folium_static
+import os 
+
+# Dapatkan direktori saat ini dari file ini
+base_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(base_dir, 'merged_dataset.csv')
 
 # Memuat dataset
-merged_df = pd.read_csv('merged_dataset.csv')
+merged_df = pd.read_csv(file_path)
 merged_df['order_purchase_timestamp'] = pd.to_datetime(merged_df['order_purchase_timestamp'])
 
 # Judul dan sidebar untuk filter
